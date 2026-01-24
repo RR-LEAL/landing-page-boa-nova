@@ -25,27 +25,27 @@ export const Header: React.FC = () => {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
-            <button
+            <a
               onClick={() => handleNavClick("servicos")}
-              className="text-bn-gold-light hover:text-amber-600 transition-colors"
+              className=" hover:text-bn-gold-hover transition-colors"
             >
               Serviços
-            </button>
-            <button
+            </a>
+            <a
               onClick={() => handleNavClick("como-funciona")}
-              className="text-gray-700 hover:text-amber-600 transition-colors"
+              className=" hover:text-bn-gold-hover transition-colors"
             >
               Como Funciona
-            </button>
-            <button
+            </a>
+            <a
               onClick={() => handleNavClick("quem-somos")}
-              className="text-gray-700 hover:text-amber-600 transition-colors"
+              className="hover:text-bn-gold-hover transition-colors"
             >
               Quem Somos
-            </button>
+            </a>
             <button
               onClick={() => handleNavClick("contato")}
-              className="bg-bn-gold-gradient text-bn-steel font-lora-bold px-6 py-2 rounded-full hover:bg-amber-700 transition-colors"
+              className="bg-bn-gold-dark text-bn-black px-6 py-2 rounded-full hover:bg-bn-gold-hover transition-colors"
             >
               Contato
             </button>

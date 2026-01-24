@@ -9,7 +9,7 @@ import { getWhatsAppLink, WHATSAPP_NUMBER } from '@/lib/whatsapp';
 
 export const Hero: React.FC = () => {
   return (
-    <Section variant="gradient" className="pt-32 pb-20">
+    <Section backgroundImage="/image/balanca-justica.jpg" className="pt-32 pb-20">
       <Container>
         <div className="text-center text-white">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">

@@ -11,7 +11,7 @@ import { getWhatsAppLink, WHATSAPP_NUMBER } from '@/lib/whatsapp';
 
 export const Benefits: React.FC = () => {
   return (
-    <Section id="servicos" variant="gray">
+    <Section id="servicos" variant="dark">
       <Container>
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -27,7 +27,7 @@ export const Benefits: React.FC = () => {
             return (
               <div 
                 key={index}
-                className="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow border border-gray-100"
+                className="p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow border border-gray-100"
               >
                 <div className="text-amber-600 mb-4">
                   <IconComponent icon={service.icon} />

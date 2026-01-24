@@ -1,66 +1,26 @@
 @import "tailwindcss";
 
-@font-face {
-  font-family: 'LoraBold';
-  font-display: swap;
-  src: url('/fonts/Lora-Bold.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'LoraMedium';
-  font-display: swap;
-  src: url('/fonts/Lora-Medium.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'LoraRegular';
-  font-display: swap;
-  src: url('/fonts/Lora-Regular.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'RalewayRegular';
-  font-display: swap; 
-  src: url('/fonts/Raleway-Regular.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'RalewayMedium';
-  font-display: swap; 
-  src: url('/fonts/Raleway-Medium.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'RalewayBold';
-  font-display: swap; 
-  src: url('/fonts/Raleway-Bold.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'RalewayLight';
-  font-display: swap; 
-  src: url('/fonts/Raleway-Light.woff2') format('woff2');
+@theme {
+  --color-bn-gold-light: #ebc78a;
+  --color-bn-gold-dark: #b99153;
+  --color-bn-gold-hover: #EACD8C;
+  --color-bn-black: #0b1326;
+  --color-bn-silver: #cbd5e1;
+  --color-bn-paper: #f8fafc;
+
+  --background-bn-gold-gradient: linear-gradient(to right, #B88A44, #EACD8C, #B88A44);
+  
+  --breakpoint-sm: 375px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 62rem;
+  --breakpoint-xl: 64rem;
+  --breakpoint-2xl: 90rem;
+  --breakpoint-3xl: 120rem;
+  --breakpoint-4xl: 160rem;
 }
 
-@layer utilities {
-  .bg-bn-gold-gradient {
-    background: linear-gradient(to right, #B88A44, #EACD8C, #B88A44);
-  }
-  .font-lora-bold {
-    font-family: 'LoraBold';
-  }
-  .font-lora-medium {
-    font-family: 'LoraMedium';
-  }
-  .font-lora-regular {
-    font-family: 'LoraRegular';
-  }
-  .font-raleway-regular {
-    font-family: 'RalewayRegular';
-  }
-  .font-raleway-medium {
-    font-family: 'RalewayMedium';
-  }
-  .font-raleway-bold {
-    font-family: 'RalewayBold';
-  }
-  .font-raleway-light {
-    font-family: 'RalewayLight';
-  }
+@utility bg-bn-gold-gradient {
+  background: var(--background-bn-gold-gradient);
 }
 
 @layer base {
@@ -68,9 +28,10 @@
     font-family: 'LoraBold';
   }
   p, span, a, li, div {
-    font-family: 'RalewayRegular';
+    color: var(--color-bn-gold-dark);
   }
 }
+
 
 html, body {
   height: 100%;
