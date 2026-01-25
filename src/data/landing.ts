@@ -48,22 +48,40 @@ export const services: Service[] = [
 
 export const processSteps: ProcessStep[] = [
   {
-    number: "01",
-    title: "Primeiro Contato",
+    number: '01',
+    title: 'ANALISAMOS O SEU CASO',
     description:
-      "Entre em contato pelo WhatsApp e nos conte, de forma objetiva, o que aconteceu. As informações iniciais permitem uma análise técnica do seu caso.",
+      'Você nos envia fotos da sua notificação ou nos conta o seu caso.',
   },
   {
-    number: "02",
-    title: "Análise do Caso",
+    number: '02',
+    title: 'ESCLARECEMOS SUA DÚVIDA',
     description:
-      "Seu caso será analisado com atenção, avaliando viabilidade, riscos e o melhor caminho jurídico a ser adotado.",
+      'A consulta pode ser online ou presencial. Analisamos o seu caso de forma detalhada.',
   },
   {
-    number: "03",
-    title: "Ação Imediata",
+    number: '03',
+    title: 'ORÇAMENTO',
     description:
-      "Confirmada a viabilidade, adotamos imediatamente as medidas cabíveis — seja na defesa, no processo ou em medidas urgentes — sempre com atuação técnica e responsável.",
+      'A análise inicial é gratuita e sem compromisso. Você só paga honorários se ganhar.',
+  },
+  {
+    number: '04',
+    title: 'CONTRATAÇÃO',
+    description:
+      'Você nos contrata para fazermos a sua defesa em todo o processo.',
+  },
+  {
+    number: '05',
+    title: 'ENVIE SEUS DOCUMENTOS',
+    description:
+      'Você envia seus documentos tudo online e pelo celular.',
+  },
+  {
+    number: '06',
+    title: 'ESTRATÉGIA DE DEFESA',
+    description:
+      'Vamos definir a melhor estratégia de defesa e iniciar o processo.',
   },
 ];
 
