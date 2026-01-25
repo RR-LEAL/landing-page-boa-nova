@@ -5,7 +5,6 @@ import { About } from '@/components/sections/About';
 import { FAQ } from '@/components/sections/FAQ';
 import { CTA } from '@/components/sections/CTA';
 import { Footer } from '@/components/layout/Footer';
-import { Header } from '@/components/layout/Header';
 
 export default function LandingPage() {
   return (

@@ -1,5 +1,5 @@
 // WhatsApp helper
-export const WHATSAPP_NUMBER = "5522997311256";
+export const WHATSAPP_NUMBER = "5524999285258";
 
 export function getWhatsAppLink(message?: string) {
   const encoded = message ? `?text=${encodeURIComponent(message)}` : "";

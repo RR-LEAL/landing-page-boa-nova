@@ -18,7 +18,7 @@ export const IconComponent: React.FC<IconComponentProps> = ({
   icon: Icon,
   className = '',
   size = 'md',
-  color = 'text-amber-600',
+  color = 'text-bn-gold-dark',
 }) => {
   return (
     <div className={`${color} ${className}`}>
