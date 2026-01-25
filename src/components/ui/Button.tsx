@@ -3,7 +3,8 @@
 import React from 'react';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'primary' | 'secondary' | 'whatsapp';
+  variant?: 'primary' | 'secondary' | 'whatsapp' | 'premium';
+  className?: string
   size?: 'sm' | 'md' | 'lg';
   children: React.ReactNode;
   icon?: React.ReactNode;
@@ -16,7 +17,8 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     const variants = {
       primary: 'bg-amber-600 text-white hover:bg-amber-700',
       secondary: 'bg-gray-800 text-white hover:bg-gray-900',
-      whatsapp: 'bg-green-500 text-white hover:bg-green-600'
+      whatsapp: 'bg-green-500 text-white hover:bg-green-600',
+      premium: 'bg-gradient-to-r from-[#B88A44] via-[#EACD8C] to-[#B88A44] text-white hover:from-yellow-500 hover:via-red-600 hover:to-pink-600'
     };
 
     const sizes = {
