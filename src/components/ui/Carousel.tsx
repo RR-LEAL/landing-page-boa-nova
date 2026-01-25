@@ -63,17 +63,21 @@ export const Carousel: React.FC<CarouselProps> = ({
       {/* Botão Anterior */}
       <button
         onClick={prevSlide}
-        className="absolute -left-4 md:-left-16 top-1/2 -translate-y-1/2 z-10 bg-bn-gold-dark hover:bg-bn-gold-hover text-bn-black p-3 rounded-full shadow-lg transition-all"
+        className={`absolute top-1/2 -translate-y-1/2 z-10 transition-all ${
+          isMobile 
+            ? '-left-4 text-bn-gold-dark p-2' 
+            : '-left-4 md:-left-16 bg-bn-gold-dark hover:bg-bn-gold-hover text-bn-black p-3 rounded-full shadow-lg'
+        }`}
         aria-label="Item anterior"
       >
         <ChevronLeft className="w-6 h-6" />
       </button>
 
       {/* Conteúdo do Carrossel */}
-      <div className="overflow-hidden bg-">
-        <div className={`grid gap-8 ${isMobile ? 'grid-cols-1' : 'md:grid-cols-3'}`}>
+      <div className="overflow-hidden">
+        <div className={`grid gap-4 md:gap-8 ${isMobile ? 'grid-cols-1 px-8' : 'md:grid-cols-3'}`}>
           {visibleItems.map((child, index) => (
-            <div key={currentIndex * cardsPerView + index} className="flex flex-col h-full min-h-[350px]">
+            <div key={currentIndex * cardsPerView + index} className="flex flex-col h-full min-h-[400px] md:min-h-[350px]">
               {child}
             </div>
           ))}
@@ -83,7 +87,11 @@ export const Carousel: React.FC<CarouselProps> = ({
       {/* Botão Próximo */}
       <button
         onClick={nextSlide}
-        className="absolute -right-4 md:-right-16 top-1/2 -translate-y-1/2 z-10 bg-bn-gold-dark hover:bg-bn-gold-hover text-bn-black p-3 rounded-full shadow-lg transition-all"
+        className={`absolute top-1/2 -translate-y-1/2 z-10 transition-all ${
+          isMobile 
+            ? '-right-4 text-bn-gold-dark p-2' 
+            : '-right-4 md:-right-16 bg-bn-gold-dark hover:bg-bn-gold-hover text-bn-black p-3 rounded-full shadow-lg'
+        }`}
         aria-label="Próximo item"
       >
         <ChevronRight className="w-6 h-6" />
