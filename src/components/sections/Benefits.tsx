@@ -5,7 +5,6 @@ import { Phone } from 'lucide-react';
 import { Container } from '@/components/ui/Container';
 import { Button } from '@/components/ui/Button';
 import { Section } from '@/components/ui/Section';
-import { Carousel } from '@/components/ui/Carousel';
 import { services } from '@/data/landing';
 import { IconComponent } from '@/components/ui/IconComponent';
 import { getWhatsAppLink, WHATSAPP_NUMBER } from '@/lib/whatsapp';
@@ -23,7 +22,7 @@ export const Benefits: React.FC = () => {
           </p>
         </div>
 
-        <Carousel itemsPerView={{ mobile: 1, desktop: 3 }} showIndicators>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {services.map((service, index) => (
             <div 
               key={index}
@@ -40,7 +39,7 @@ export const Benefits: React.FC = () => {
               </p>
             </div>
           ))}
-        </Carousel>
+        </div>
 
         <div className="text-center mt-12">
           <a 

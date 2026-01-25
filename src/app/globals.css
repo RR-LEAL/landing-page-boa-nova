@@ -11,12 +11,12 @@
   --background-bn-gold-gradient: linear-gradient(to right, #B88A44, #EACD8C, #B88A44);
   
   --breakpoint-sm: 375px;
-  --breakpoint-md: 768px;
-  --breakpoint-lg: 62rem;
-  --breakpoint-xl: 64rem;
-  --breakpoint-2xl: 90rem;
-  --breakpoint-3xl: 120rem;
-  --breakpoint-4xl: 160rem;
+  --breakpoint-md: 576px;
+  --breakpoint-lg: 768px;
+  --breakpoint-xl: 992px;
+  --breakpoint-2xl: 1200px;
+  --breakpoint-3xl: 1920px;
+  --breakpoint-4xl: 2560px;
 }
 
 @utility bg-bn-gold-gradient {

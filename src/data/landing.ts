@@ -8,41 +8,41 @@ export const contactInfo: ContactInfo = {
 };
 
 export const services: Service[] = [
-  {
+    {
     icon: Shield,
-    title: "Prisão em flagrante e acompanhamento em delegacias (24 horas)",
+    title: "Advogado para Violência Doméstica e Medidas Protetivas",
     description:
-      "Atuação imediata para garantir seus direitos desde o primeiro momento da prisão, com acompanhamento direto na delegacia e orientação à família 24 horas.",
+      "Defesa jurídica em casos de violência doméstica, medidas protetivas e risco de prisão, com atuação imediata e acompanhamento completo do processo.",
   },
   {
     icon: Scale,
-    title: "Audiência de custódia, Habeas Corpus",
+    title: "Advogado Criminal e Acompanhamento em Delegacia",
     description:
-      "Defesa técnica focada na liberdade do acusado, atuando para evitar prisões ilegais e buscar a soltura o mais rápido possível.",
+      "Atuação em flagrantes, investigações criminais e processos penais, garantindo seus direitos desde o atendimento na delegacia até a defesa judicial.",
   },
   {
     icon: FileText,
-    title: "Acompanhamento de Inquérito Policial",
+    title: "Defesa em Processos Criminais e Risco de Prisão",
     description:
-      "Atuação estratégica durante a investigação para prevenir abusos, orientar depoimentos e reduzir riscos antes da denúncia.",
+      "Defesa técnica e estratégica para quem está sendo acusado de crime ou enfrenta possibilidade de prisão preventiva ou temporária.",
   },
   {
     icon: Users,
-    title: "Juizado Especial Criminal (JECRIM)",
+    title: "Advogado para Guarda, Pensão e Direito de Família",
     description:
-      "Defesa em crimes de menor potencial ofensivo, buscando soluções rápidas, acordos legais e a redução de impactos na vida do cliente.",
+      "Atuação em guarda de filhos, pensão alimentícia, regulamentação de visitas e conflitos familiares com orientação jurídica segura.",
   },
   {
     icon: FileText,
-    title: "Acompanhamento processual",
+    title: "Advogado do Consumidor para Cobranças Indevidas e Negativação",
     description:
-      "Monitoramento constante do processo criminal, com defesa ativa em todas as fases e comunicação clara sobre cada andamento.",
+      "Defesa contra abusos de empresas, cobranças indevidas, negativação indevida no nome e problemas contratuais.",
   },
   {
     icon: Gavel,
-    title: "Execução Penal e Tribunal do Júri",
+    title: "Consultoria e Orientação Jurídica Personalizada",
     description:
-      "Atuação na fase de cumprimento da pena e em crimes contra a vida, com defesa técnica no Júri e estratégias para progressão e benefícios legais.",
+      "Análise detalhada do caso com orientação jurídica estratégica e atendimento direto com o advogado para definição da melhor solução legal.",
   },
 ];
 

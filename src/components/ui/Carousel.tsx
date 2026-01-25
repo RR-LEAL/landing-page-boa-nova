@@ -7,6 +7,7 @@ interface CarouselProps {
   children: React.ReactNode[];
   itemsPerView?: {
     mobile: number;
+    tablet: number;
     desktop: number;
   };
   showIndicators?: boolean;
@@ -16,26 +17,33 @@ interface CarouselProps {
 
 export const Carousel: React.FC<CarouselProps> = ({
   children,
-  itemsPerView = { mobile: 1, desktop: 3 },
+  itemsPerView = { mobile: 1, tablet: 2, desktop: 3 },
   showIndicators = true,
   autoPlay = false,
   autoPlayInterval = 5000,
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isMobile, setIsMobile] = useState(false);
+  const [viewportType, setViewportType] = useState<'mobile' | 'tablet' | 'desktop'>('desktop');
 
   useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
+    const checkViewport = () => {
+      const width = window.innerWidth;
+      if (width < 768) {
+        setViewportType('mobile');
+      } else if (width < 1024) {
+        setViewportType('tablet');
+      } else {
+        setViewportType('desktop');
+      }
     };
     
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
+    checkViewport();
+    window.addEventListener('resize', checkViewport);
     
-    return () => window.removeEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkViewport);
   }, []);
 
-  const cardsPerView = isMobile ? itemsPerView.mobile : itemsPerView.desktop;
+  const cardsPerView = itemsPerView[viewportType];
   const totalSlides = Math.ceil(children.length / cardsPerView);
 
   const nextSlide = () => {
@@ -59,25 +67,29 @@ export const Carousel: React.FC<CarouselProps> = ({
   );
 
   return (
-    <div className="relative">
+    <div className="relative px-2 sm:px-0">
       {/* Botão Anterior */}
       <button
         onClick={prevSlide}
-        className={`absolute top-1/2 -translate-y-1/2 z-10 transition-all ${
-          isMobile 
-            ? '-left-4 text-bn-gold-dark p-2' 
-            : '-left-4 md:-left-16 bg-bn-gold-dark hover:bg-bn-gold-hover text-bn-black p-3 rounded-full shadow-lg'
-        }`}
+        className="absolute top-1/2 -translate-y-1/2 z-10 transition-all -left-8 text-bn-gold-dark p-2 xl:-left-4 2xl:-left-16 xl:bg-bn-gold-dark xl:hover:bg-bn-gold-hover xl:text-bn-black xl:rounded-full xl:shadow-lg"
         aria-label="Item anterior"
       >
-        <ChevronLeft className="w-6 h-6" />
+        <ChevronLeft className="w-8 h-8" />
       </button>
 
       {/* Conteúdo do Carrossel */}
-      <div className="overflow-hidden">
-        <div className={`grid gap-4 md:gap-8 ${isMobile ? 'grid-cols-1 px-8' : 'md:grid-cols-3'}`}>
+      <div className="overflow-hidden px-14 sm:px-4 lg:px-4 2xl:px-0">
+        <div className={`grid gap-4 lg:gap-8 ${
+          viewportType === 'mobile' ? 'grid-cols-1' : 
+          viewportType === 'tablet' ? 'grid-cols-2' : 
+          'grid-cols-3'
+        }`}>
           {visibleItems.map((child, index) => (
-            <div key={currentIndex * cardsPerView + index} className="flex flex-col h-full min-h-[400px] md:min-h-[350px]">
+            <div key={currentIndex * cardsPerView + index} className={`flex flex-col h-full ${
+              viewportType === 'mobile' ? 'min-h-[400px]' :
+              viewportType === 'tablet' ? 'min-h-[350px]' :
+              'min-h-[400px]'
+            }`}>
               {child}
             </div>
           ))}
@@ -87,14 +99,10 @@ export const Carousel: React.FC<CarouselProps> = ({
       {/* Botão Próximo */}
       <button
         onClick={nextSlide}
-        className={`absolute top-1/2 -translate-y-1/2 z-10 transition-all ${
-          isMobile 
-            ? '-right-4 text-bn-gold-dark p-2' 
-            : '-right-4 md:-right-16 bg-bn-gold-dark hover:bg-bn-gold-hover text-bn-black p-3 rounded-full shadow-lg'
-        }`}
+        className="absolute top-1/2 -translate-y-1/2 z-10 transition-all -right-8 text-bn-gold-dark p-2 xl:-right-4 2xl:-right-16 xl:bg-bn-gold-dark xl:hover:bg-bn-gold-hover xl:text-bn-black xl:rounded-full xl:shadow-lg"
         aria-label="Próximo item"
       >
-        <ChevronRight className="w-6 h-6" />
+        <ChevronRight className="w-8 h-8" />
       </button>
 
       {/* Indicadores de páginas */}
