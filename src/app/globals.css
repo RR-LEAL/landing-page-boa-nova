@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bn-gold-light: #ebc78a;
+  --color-bn-gold-dark: #b99153;
+  --color-bn-gold-hover: #EACD8C;
+  --color-bn-black: #0b1326;
+  --color-bn-silver: #cbd5e1;
+  --color-bn-paper: #f8fafc;
+
+  --background-bn-gold-gradient: linear-gradient(to right, #B88A44, #EACD8C, #B88A44);
+  
+  --breakpoint-sm: 375px;
+  --breakpoint-md: 576px;
+  --breakpoint-lg: 768px;
+  --breakpoint-xl: 992px;
+  --breakpoint-2xl: 1200px;
+  --breakpoint-3xl: 1920px;
+  --breakpoint-4xl: 2560px;
+}
+
+@utility bg-bn-gold-gradient {
+  background: var(--background-bn-gold-gradient);
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'LoraBold';
+  }
+  p, span, a, li, div {
+    color: var(--color-bn-gold-dark);
+  }
+}
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #0b1326;
+}
+
