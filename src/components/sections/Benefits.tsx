@@ -12,11 +12,11 @@ export const Benefits: React.FC = () => {
   return (
     <Section variant="dark">
       <Container>
-        <div className="text-center mb-16 text-white">
+        <div className="text-center mb-16 text-slate-200">
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
             Como podemos te ajudar
           </h2>
-          <p className="text-xl text-gray-200">
+          <p className="text-xl text-slate-200">
             Se você enfrenta algum desses problemas, <span className="font-semibold text-bn-gold-dark">estamos aqui para ajudar</span>.
           </p>
         </div>
@@ -33,7 +33,7 @@ export const Benefits: React.FC = () => {
               <h3 className="text-xl font-bold text-bn-gold-dark mb-4">
                 {service.title}
               </h3>
-              <p className="text-gray-200 leading-relaxed">
+              <p className="text-slate-200 leading-relaxed">
                 {service.description}
               </p>
             </div>
@@ -46,8 +46,8 @@ export const Benefits: React.FC = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Button variant="premium" size="lg">
-              ENVIAR MENSAGEM NO WHATSAPP
+            <Button variant="premium" size="lg" className='uppercase'>
+              Falar com o advogado agora
             </Button>
           </a>
         </div>

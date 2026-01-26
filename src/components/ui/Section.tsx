@@ -9,6 +9,7 @@ interface SectionProps {
   overlay?: boolean;       
   parallax?: boolean; 
   backgroundBlur?: boolean;
+  divider?: boolean;
 }
 
 
@@ -19,7 +20,8 @@ export const Section: React.FC<SectionProps> = ({
   variant = 'white',
   backgroundImage,
   overlay = true,
-  backgroundBlur = false
+  backgroundBlur = false,
+  divider = true
 }) => {
   const variants = {
     white: 'bg-white',
@@ -60,6 +62,10 @@ export const Section: React.FC<SectionProps> = ({
       <div className="relative z-10">
         {children}
       </div>
+
+      {divider && (
+        <div className="pointer-events-none absolute left-0 right-0 bottom-0 mx-auto h-px w-full max-w-5xl bg-gradient-to-r from-transparent via-bn-gold-dark/80 to-transparent" />
+      )}
     </section>
   );
 };

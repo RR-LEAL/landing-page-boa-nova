@@ -9,7 +9,7 @@ import { getWhatsAppLink, WHATSAPP_NUMBER } from '@/lib/whatsapp';
 
 export const CTA: React.FC = () => {
   return (
-    <Section id="contato" className="bg-gradient-to-br from-amber-600 to-amber-800">
+    <Section variant='dark'>
       <Container size="md">
         <div className="text-center text-white">
           <h2 className="text-3xl md:text-5xl font-bold mb-6">

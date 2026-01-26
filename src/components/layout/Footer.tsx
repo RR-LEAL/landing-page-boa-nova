@@ -5,7 +5,8 @@ import { contactInfo } from '@/data/landing';
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-900 text-white py-12 px-4">
+    <footer className="relative bg-gray-900 text-white py-12 px-4">
+      <div className="pointer-events-none absolute left-0 right-0 top-0 mx-auto h-px w-full max-w-5xl bg-gradient-to-r from-transparent via-bn-gold-dark/60 to-transparent" />
       <Container>
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>

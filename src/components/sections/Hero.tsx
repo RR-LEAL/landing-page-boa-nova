@@ -24,12 +24,12 @@ export const Hero: React.FC = () => {
             />
             
             {/* Imagem da moça - Aparece aqui no mobile */}
-            <div className="relative mix-blend-darken h-100 md:h-150 overflow-hidden mb-6 md:hidden">
+            <div className="relative mix-blend-darken h-75 sm:h-100 overflow-hidden mb-6 md:hidden rounded-lg">
               <Image
-                src="/images/moca-1.png"
+                src="/images/homem.avif"
                 alt="Advocacia Criminal"
                 fill
-                className="object-cover"
+                className="object-cover object-center"
                 priority
               />
             </div>
@@ -38,7 +38,7 @@ export const Hero: React.FC = () => {
             <h1 className="text-2xl text-center md:text-3xl lg:text-4xl lg:text-left font-bold mb-6">
               Advogado Especialista em Direito Penal, Família e Consumidor
             </h1>
-            <p className="text-base text-center md:text-lg lg:text-xl lg:text-left text-gray-200 mb-8 leading-relaxed">
+            <p className="text-base text-center md:text-lg lg:text-xl lg:text-left text-slate-200 mb-8 leading-relaxed">
               Atuação técnica, estratégica e humanizada em casos urgentes e delicados, com atendimento direto pelo advogado.
             </p>
             <a 
@@ -46,19 +46,19 @@ export const Hero: React.FC = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button variant="premium" size="lg">
-                ENVIAR MENSAGEM NO WHATSAPP
+              <Button variant="premium" size="lg" className='uppercase'>
+                Falar com o advogado agora
               </Button>
             </a>
           </div>
 
           {/* Coluna de Imagem - Só aparece no desktop */}
-          <div className="hidden md:block relative mix-blend-darken h-150 overflow-hidden order-2">
+          <div className="hidden md:block relative mix-blend-darken h-100 lg:h-125 xl:h-150 overflow-hidden order-2 rounded-lg">
             <Image
-              src="/images/moca-1.avif"
+              src="/images/homem.avif"
               alt="Advocacia Criminal"
               fill
-              className="object-cover"
+              className="object-cover object-center"
               priority
             />
           </div>
