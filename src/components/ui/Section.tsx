@@ -4,7 +4,7 @@ interface SectionProps {
   children: React.ReactNode;
   className?: string;
   id?: string;
-  variant?: 'white' | 'gray' | 'dark' | 'gradient';
+  variant?: 'white' | 'gray' | 'dark'  | 'slate' | 'gradient';
   backgroundImage?: string;   
   overlay?: boolean;       
   parallax?: boolean; 
@@ -24,7 +24,8 @@ export const Section: React.FC<SectionProps> = ({
   const variants = {
     white: 'bg-white',
     gray: 'bg-gray-600',
-    dark: 'bg-gray-900 text-white',
+    dark: 'bg-bn-black',
+    slate: 'bg-slate-900',
     gradient: 'bg-gradient-to-br from-gray-900 via-gray-800 to-amber-900 text-white'
   };
 

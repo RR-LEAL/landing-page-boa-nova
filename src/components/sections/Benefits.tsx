@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import { Phone } from 'lucide-react';
 import { Container } from '@/components/ui/Container';
 import { Button } from '@/components/ui/Button';
 import { Section } from '@/components/ui/Section';
@@ -11,9 +10,9 @@ import { getWhatsAppLink, WHATSAPP_NUMBER } from '@/lib/whatsapp';
 
 export const Benefits: React.FC = () => {
   return (
-    <Section backgroundImage='/images/dark-blue.png'>
+    <Section variant="dark">
       <Container>
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 text-white">
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
             Como podemos te ajudar
           </h2>
@@ -26,7 +25,7 @@ export const Benefits: React.FC = () => {
           {services.map((service, index) => (
             <div 
               key={index}
-              className="p-8 rounded-xl shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 ease-in-out bg-bn-black h-full cursor-pointer"
+              className="p-8 rounded-xl shadow-md shadow-bn-gold-dark/20 hover:shadow-xl hover:scale-105 transition-all duration-300 ease-in-out bg-slate-900 h-full cursor-pointer"
             >
               <div className="text-bn-gold-dark mb-4">
                 <IconComponent icon={service.icon} />

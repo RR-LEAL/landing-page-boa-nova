@@ -9,7 +9,7 @@ import { getWhatsAppLink, WHATSAPP_NUMBER } from '@/lib/whatsapp';
 
 export const Hero: React.FC = () => {
   return (
-    <Section backgroundImage="/images/contrato.png" backgroundBlur className="pt-20 ">
+    <Section backgroundImage="/images/escritorio.avif" backgroundBlur className="pt-20 ">
       <Container>
         <div className="grid md:grid-cols-2 gap-8 md:gap-14 items-center">
           {/* Coluna de Conteúdo - Primeira no desktop */}
@@ -24,7 +24,7 @@ export const Hero: React.FC = () => {
             />
             
             {/* Imagem da moça - Aparece aqui no mobile */}
-            <div className="relative mix-blend-darken h-[400px] md:h-[600px] overflow-hidden mb-6 md:hidden">
+            <div className="relative mix-blend-darken h-100 md:h-150 overflow-hidden mb-6 md:hidden">
               <Image
                 src="/images/moca-1.png"
                 alt="Advocacia Criminal"
@@ -53,9 +53,9 @@ export const Hero: React.FC = () => {
           </div>
 
           {/* Coluna de Imagem - Só aparece no desktop */}
-          <div className="hidden md:block relative mix-blend-darken h-[600px] overflow-hidden order-2">
+          <div className="hidden md:block relative mix-blend-darken h-150 overflow-hidden order-2">
             <Image
-              src="/images/moca-1.png"
+              src="/images/moca-1.avif"
               alt="Advocacia Criminal"
               fill
               className="object-cover"

@@ -3,6 +3,7 @@
 import { processSteps } from "@/data/landing"
 import { Container } from "@/components/ui/Container"
 import { useEffect, useRef, useState } from "react"
+import { Section } from "@/components/ui/Section"
 
 export function ProcessSteps() {
   const [visibleCards, setVisibleCards] = useState<Set<number>>(new Set())
@@ -36,28 +37,28 @@ export function ProcessSteps() {
   }, [])
 
   return (
-    <section className="relative overflow-hidden bg-bn-gold-light py-28">
+    <Section variant="slate" className="relative overflow-hidden py-28">
       {/* Glow radial no fundo */}
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute left-1/2 top-0 h-[600px] w-[600px] -translate-x-1/2 rounded-full bg-[#1e3a5f] opacity-20 blur-3xl" />
+        <div className="absolute left-1/2 top-1/4 h-[1024px] w-[1024px] -translate-x-1/2 rounded-full bg-bn-gold-light opacity-10 blur-[250px]" />
       </div>
 
       <Container>
         {/* Título */}
         <div className="mb-24 text-center">
-          <p className="mb-3 text-sm tracking-[0.4em] text-amber-400">
+          <p className="mb-3 text-sm tracking-[0.4em] text-bn-gold-dark">
             O PASSO A PASSO
           </p>
-          <h2 className="text-4xl font-semibold text-white md:text-5xl">
-            COMO FUNCIONA <span className="text-amber-400">O ATENDIMENTO</span>
+          <h2 className="text-4xl font-semibold text-bn-paper md:text-5xl">
+            COMO FUNCIONA <span className="text-bn-gold-dark">O ATENDIMENTO</span>
           </h2>
         </div>
 
         <div className="relative">
           {/* Linha vertical central */}
-          <div className="absolute left-1/2 top-0 h-full w-[2px] -translate-x-1/2 bg-amber-400/70" />
+          <div className="absolute left-1/2 top-0 h-full w-0.5 -translate-x-1/2 bg-bn-gold-gradient opacity-40" />
 
-          <div className="space-y-20">
+          <div className="">
             {processSteps.map((processStep, index) => {
               const isLeft = index % 2 === 0
               const isVisible = visibleCards.has(index)
@@ -70,7 +71,7 @@ export function ProcessSteps() {
                   className="relative flex w-full items-center justify-between"
                 >
                   {/* Ponto central */}
-                  <div className={`absolute left-1/2 z-10 flex h-8 w-8 -translate-x-1/2 items-center justify-center rounded-full border-2 border-amber-400 bg-[#0b2232] transition-all duration-500 ${
+                  <div className={`absolute left-1/2 z-10 flex h-5 w-5 -translate-x-1/2 items-center justify-center rounded-full bg-bn-gold-dark transition-all duration-500 ${
                     isVisible ? 'scale-100 opacity-100' : 'scale-0 opacity-0'
                   }`} />
 
@@ -88,16 +89,16 @@ export function ProcessSteps() {
                         : 'opacity-0 translate-x-20 translate-y-10'
                     }`}
                   >
-                    <div className="rounded-2xl bg-white p-8 shadow-2xl">
-                      <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-amber-100 px-4 py-1 text-sm font-semibold text-amber-700">
+                    <div className="rounded-2xl bg-bn-black p-8 shadow-2xl">
+                      <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-bn-gold-light/90 px-4 py-1 text-sm font-bold text-bn-black">
                         {processStep.number}
                       </div>
 
-                      <h3 className="mb-3 text-lg font-semibold text-slate-800">
+                      <h3 className="mb-3 text-lg font-semibold text-bn-gold-dark">
                         {processStep.title}
                       </h3>
 
-                      <p className="text-sm leading-relaxed text-slate-600">
+                      <p className="text-sm leading-relaxed text-bn-silver">
                         {processStep.description}
                       </p>
                     </div>
@@ -108,6 +109,6 @@ export function ProcessSteps() {
           </div>
         </div>
       </Container>
-    </section>
+    </Section>
   )
 }
