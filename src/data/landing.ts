@@ -2,9 +2,9 @@ import { Shield, Scale, FileText, Users, Gavel } from "lucide-react";
 import { Service, ProcessStep, FAQ, ContactInfo } from "@/types/landing";
 
 export const contactInfo: ContactInfo = {
-  whatsappNumber: "5522997311256",
-  phone: "(22) 99731-1256",
-  address: "Região dos Lagos - RJ",
+  whatsappNumber: "5524999285258",
+  phone: "(24) 99928-5258",
+  address: "Largo Nove de Abril, n° 27 - 5° Andar Sala 511- Vila Santa Cecília, Volta Redonda - RJ",
 };
 
 export const services: Service[] = [
@@ -87,18 +87,34 @@ export const processSteps: ProcessStep[] = [
 
 export const faqs: FAQ[] = [
   {
-    question: "Em quais cidades você atua?",
+    question: "Fui acusado de violência doméstica ou recebi uma medida protetiva. Posso ser preso?",
     answer:
-      "A atuação abrange todas as cidades da Região dos Lagos, incluindo Arraial do Cabo, Armação dos Búzios, Cabo Frio, Araruama, Iguaba Grande e São Pedro da Aldeia.",
+      "Sim. Dependendo da situação, a acusação pode resultar em prisão preventiva ou restrições imediatas. Por isso, é fundamental procurar um advogado criminal o quanto antes para analisar o caso, orientar sobre seus direitos e definir a melhor estratégia de defesa desde o início.",
   },
   {
-    question: "O atendimento é 24 horas?",
+    question: "Preciso de advogado para me acompanhar na delegacia?",
     answer:
-      "Sim. O atendimento é realizado 24 horas, inclusive para casos urgentes como prisão em flagrante e audiências de custódia.",
+      "Sim. O acompanhamento de um advogado na delegacia é essencial para garantir que seus direitos sejam respeitados e evitar que qualquer informação prejudique sua defesa. A orientação jurídica nesse momento faz toda a diferença no andamento do caso.",
   },
   {
-    question: "O atendimento é presencial ou online?",
+    question: "Como funciona a guarda dos filhos e a pensão alimentícia?",
     answer:
-      "O atendimento pode ser presencial ou online, conforme a necessidade do caso e a urgência da situação.",
+      "A definição de guarda e pensão depende das particularidades de cada família e sempre considera o melhor interesse da criança. Um advogado de família é importante para orientar, negociar e, se necessário, atuar judicialmente para proteger seus direitos.",
+  },
+  {
+    question: "Meu nome foi negativado indevidamente. Posso processar a empresa?",
+    answer:
+      "Sim. A negativação indevida é uma prática abusiva e gera direito à reparação. Um advogado do consumidor pode solicitar a retirada do nome dos órgãos de proteção ao crédito e buscar indenização pelos danos sofridos.",
+  },
+  {
+    question: "O atendimento é feito diretamente com o advogado? Como funciona o primeiro contato?",
+    answer:
+      "Sim. O atendimento é realizado diretamente pelo advogado Bruno Boa Nova. O primeiro contato acontece pelo WhatsApp, onde é feita uma análise inicial do caso e orientação clara sobre os próximos passos jurídicos, de forma rápida e personalizada.",
+  },
+  {
+    question: "O atendimento pode ser online e quanto tempo demora para obter resposta?",
+    answer:
+      "O atendimento pode ser feito de forma online ou presencial, conforme a necessidade do cliente. O retorno é realizado o mais rápido possível, principalmente em situações urgentes que envolvem risco de prisão, medidas protetivas ou conflitos familiares.",
   },
 ];
+

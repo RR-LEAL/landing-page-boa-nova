@@ -40,3 +40,48 @@ html, body {
   background-color: #0b1326;
 }
 
+.faq-gold {
+  background: linear-gradient(
+    to bottom,
+    #d2a85b 0%,
+    #9a6d34 25%,
+    #735025 50%,
+    #463015 75%,
+    #221509 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.8));
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+}
+
+/* Camada de luz no centro */
+.faq-gold-light {
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 230, 170, 0.9) 0%,
+    rgba(255, 215, 120, 0.6) 30%,
+    rgba(0, 0, 0, 0) 65%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+@keyframes soft-blink {
+  0%, 100% {
+    opacity: 1;
+    box-shadow: 0 0 0 rgba(234, 205, 140, 0);
+  }
+  50% {
+    opacity: 0.85;
+    box-shadow: 0 0 32px rgba(234, 205, 140, 0.6);
+  }
+}
+
+.blink-soft {
+  animation: soft-blink 1.6s ease-in-out infinite;
+}

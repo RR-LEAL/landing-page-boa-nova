@@ -5,10 +5,14 @@ interface SectionProps {
   className?: string;
   id?: string;
   variant?: 'white' | 'gray' | 'dark'  | 'slate' | 'gradient';
-  backgroundImage?: string;   
+  backgroundImage?: string;
+  backgroundImageMobile?: string;
   overlay?: boolean;       
   parallax?: boolean; 
   backgroundBlur?: boolean;
+  divider?: boolean;
+  backgroundPosition?: string;
+  overlayIntensity?: 'light' | 'medium' | 'dark' | 'darker';
 }
 
 
@@ -18,8 +22,12 @@ export const Section: React.FC<SectionProps> = ({
   id,
   variant = 'white',
   backgroundImage,
+  backgroundImageMobile,
   overlay = true,
-  backgroundBlur = false
+  backgroundBlur = false,
+  divider = true,
+  backgroundPosition = 'center',
+  overlayIntensity = 'medium'
 }) => {
   const variants = {
     white: 'bg-white',
@@ -41,25 +49,43 @@ export const Section: React.FC<SectionProps> = ({
       className={baseClasses}
       style={
         backgroundImage
-          ? { backgroundImage: `url(${backgroundImage})` }
+          ? { 
+              backgroundImage: `url(${backgroundImage})`,
+              backgroundPosition: backgroundPosition
+            }
           : undefined
       }
     >
+      {/* Background mobile diferente */}
+      {backgroundImageMobile && (
+        <div
+          className="absolute inset-0 z-0 md:hidden bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${backgroundImageMobile})`, backgroundPosition }}
+        />
+      )}
+
       {/* Overlay profissional */}
-      {backgroundImage && (overlay || backgroundBlur) && (
+      {(backgroundImage || backgroundImageMobile) && (overlay || backgroundBlur) && (
         <div
           className={[
-            'absolute inset-0',
-            overlay ? 'bg-black/60' : 'bg-transparent',
+            'absolute inset-0 z-10',
+            overlay && overlayIntensity === 'light' ? 'bg-black/20' : '',
+            overlay && overlayIntensity === 'medium' ? 'bg-black/40 md:bg-black/10' : '',
+            overlay && overlayIntensity === 'dark' ? 'bg-black/70' : '',
+            overlay && overlayIntensity === 'darker' ? 'bg-black/80' : '',
             backgroundBlur ? 'backdrop-blur-xs' : ''
           ].filter(Boolean).join(' ')}
         />
       )}
 
       {/* Conteúdo acima do overlay */}
-      <div className="relative z-10">
+      <div className="relative z-20">
         {children}
       </div>
+
+      {divider && (
+        <div className="pointer-events-none absolute left-0 right-0 bottom-0 mx-auto h-px w-full max-w-5xl bg-gradient-to-r from-transparent via-bn-gold-dark/80 to-transparent" />
+      )}
     </section>
   );
 };
