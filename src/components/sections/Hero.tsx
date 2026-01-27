@@ -21,7 +21,7 @@ export const Hero: React.FC = () => {
           <div className="text-left text-bn-gold-light order-1">
             {/* Logo */}
             <Image
-              src="/images/logo-sem-fundo-reduzido.png"
+              src="/images/logo-sem-fundo-reduzido.jpeg"
               alt="Logo Bruno Boa Nova Advocacia"
               width={350}
               height={350}
