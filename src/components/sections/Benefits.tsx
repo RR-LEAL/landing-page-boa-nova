@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/Button';
 import { Section } from '@/components/ui/Section';
 import { services } from '@/data/landing';
 import { IconComponent } from '@/components/ui/IconComponent';
-import { getWhatsAppLink, WHATSAPP_NUMBER } from '@/lib/whatsapp';
+import { getWhatsAppLink } from '@/lib/whatsapp';
 
 export const Benefits: React.FC = () => {
   return (
@@ -42,7 +42,7 @@ export const Benefits: React.FC = () => {
 
         <div className="text-center mt-12">
           <a 
-            href={getWhatsAppLink(WHATSAPP_NUMBER)}
+            href={getWhatsAppLink()}
             target="_blank"
             rel="noopener noreferrer"
           >

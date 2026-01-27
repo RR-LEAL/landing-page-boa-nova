@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 import { ChevronRight } from 'lucide-react'
-import { getWhatsAppLink, WHATSAPP_NUMBER } from '@/lib/whatsapp'
 import { Button } from '../ui/Button'
 import { faqs } from '@/data/landing'
 import { Section } from '../ui/Section'
@@ -65,19 +64,6 @@ export function FAQ() {
               </button>
             )
           })}
-        </div>
-
-        {/* Botão */}
-        <div className="mt-8 flex justify-center">
-          <a 
-            href={getWhatsAppLink(WHATSAPP_NUMBER)}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Button variant="premium" size="lg" className='uppercase'>
-              Falar com o advogado agora
-            </Button>
-          </a>
         </div>
       </div>
     </Section>

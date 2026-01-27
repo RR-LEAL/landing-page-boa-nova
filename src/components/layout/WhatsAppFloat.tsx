@@ -1,11 +1,11 @@
 import React from "react";
 import { Phone } from "lucide-react";
-import { getWhatsAppLink, WHATSAPP_NUMBER } from "@/lib/whatsapp";
+import { getWhatsAppLink } from "@/lib/whatsapp";
 
 export const WhatsAppFloat: React.FC = () => {
   return (
     <a
-      href={getWhatsAppLink(WHATSAPP_NUMBER)}
+      href={getWhatsAppLink()}
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-6 right-6 z-50 group"

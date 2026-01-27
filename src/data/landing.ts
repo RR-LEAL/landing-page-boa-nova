@@ -2,9 +2,9 @@ import { Shield, Scale, FileText, Users, Gavel } from "lucide-react";
 import { Service, ProcessStep, FAQ, ContactInfo } from "@/types/landing";
 
 export const contactInfo: ContactInfo = {
-  whatsappNumber: "5522997311256",
-  phone: "(22) 99731-1256",
-  address: "Região dos Lagos - RJ",
+  whatsappNumber: "5524999285258",
+  phone: "(24) 99928-5258",
+  address: "Largo Nove de Abril, n° 27 - 5° Andar Sala 511- Vila Santa Cecília, Volta Redonda - RJ",
 };
 
 export const services: Service[] = [
