@@ -12,7 +12,7 @@ export const Footer: React.FC = () => {
         <div className="grid md:grid-cols-3 gap-8 mb-8 text-center items-center">
           <div className="flex justify-center">
             <Image
-              src="/images/logo-sem-fundo-reduzido.png"
+              src="/images/logo-sem-fundo-reduzido.jpeg"
               alt="Logo Bruno Boa Nova Advocacia"
               width={200}
               height={200}
