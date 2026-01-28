@@ -84,7 +84,7 @@ export const Section: React.FC<SectionProps> = ({
       </div>
 
       {divider && (
-        <div className="pointer-events-none absolute left-0 right-0 bottom-0 mx-auto h-px w-full max-w-5xl bg-gradient-to-r from-transparent via-bn-gold-dark/80 to-transparent" />
+        <div className="pointer-events-none absolute left-0 right-0 bottom-0 mx-auto h-px w-full max-w-5xl bg-linear-to-r from-transparent via-bn-gold-dark/80 to-transparent" />
       )}
     </section>
   );
