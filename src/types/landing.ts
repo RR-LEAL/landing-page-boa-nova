@@ -21,4 +21,5 @@ export interface ContactInfo {
   whatsappNumber: string;
   phone: string;
   address: string;
+  openingHours: string;
 }

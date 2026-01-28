@@ -2,11 +2,10 @@
 
 import React from 'react';
 import { Container } from '@/components/ui/Container';
-import { Button } from '@/components/ui/Button';
 import { Section } from '@/components/ui/Section';
 import { services } from '@/data/landing';
 import { IconComponent } from '@/components/ui/IconComponent';
-import { getWhatsAppLink } from '@/lib/whatsapp';
+import { WhatsAppCTA } from '@/components/ui/WhatsAppCTA';
 
 export const Benefits: React.FC = () => {
   return (
@@ -41,15 +40,7 @@ export const Benefits: React.FC = () => {
         </div>
 
         <div className="text-center mt-12">
-          <a 
-            href={getWhatsAppLink()}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Button variant="premium" size="lg" className='uppercase'>
-              Falar com o advogado agora
-            </Button>
-          </a>
+          <WhatsAppCTA buttonClassName="uppercase" />
         </div>
       </Container>
     </Section>

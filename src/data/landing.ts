@@ -4,6 +4,7 @@ import { Service, ProcessStep, FAQ, ContactInfo } from "@/types/landing";
 export const contactInfo: ContactInfo = {
   whatsappNumber: "5524999285258",
   phone: "(24) 99928-5258",
+  openingHours: "Segunda a sexta, 9h às 17h",
   address: "Largo Nove de Abril, n° 27 - 5° Andar Sala 511- Vila Santa Cecília, Volta Redonda - RJ",
 };
 
@@ -63,7 +64,7 @@ export const processSteps: ProcessStep[] = [
     number: '03',
     title: 'ORÇAMENTO',
     description:
-      'A análise inicial é gratuita e sem compromisso. Você só paga honorários se ganhar.',
+      'A análise inicial é gratuita e sem compromisso.',
   },
   {
     number: '04',

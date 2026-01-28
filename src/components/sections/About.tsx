@@ -3,9 +3,8 @@
 import React from 'react';
 import Image from 'next/image';
 import { Container } from '@/components/ui/Container';
-import { Button } from '@/components/ui/Button';
 import { Section } from '@/components/ui/Section';
-import { getWhatsAppLink } from '@/lib/whatsapp';
+import { WhatsAppCTA } from '@/components/ui/WhatsAppCTA';
 
 export const About: React.FC = () => {
   return (
@@ -41,15 +40,7 @@ export const About: React.FC = () => {
             </div>
 
             <div className="mt-8">
-              <a 
-                href={getWhatsAppLink()}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button variant="premium" size="lg" className='uppercase'>
-                  Falar com o advogado agora
-                </Button>
-              </a>
+              <WhatsAppCTA buttonClassName="uppercase" />
             </div>
           </div>
 

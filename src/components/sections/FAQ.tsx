@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 import { ChevronRight } from 'lucide-react'
-import { Button } from '../ui/Button'
 import { faqs } from '@/data/landing'
 import { Section } from '../ui/Section'
 
