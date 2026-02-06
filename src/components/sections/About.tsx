@@ -29,13 +29,13 @@ export const About: React.FC = () => {
 
             <div className="space-y-4 leading-relaxed pt-2">
               <p className="text-bn-silver">
-                Este escritório nasceu com o propósito de oferecer mais do que orientação jurídica: oferecer clareza, apoio e segurança para pessoas que enfrentam problemas delicados e urgentes. À frente está o Dr. Bruno Boa Nova, formado pela Universidade Gama Filho, com pós-graduação em direito penal e processual penal pela Ebradi e especialista em crimes relacionados à Lei Maria da Penha.
+                Este escritório foi fundado em 2011 com o propósito de oferecer mais do que orientação jurídica: proporcionar clareza, suporte e segurança a pessoas que enfrentam questões delicadas e urgentes. À frente do escritório está o Dr. Bruno Boa Nova, bacharel em Direito pela Universidade Gama Filho, pós-graduado em Direito Penal e Processual Penal pela Ebradi e especialista em crimes relacionados à Lei Maria da Penha.
               </p>
               <p className="text-bn-silver">
-                O Dr. Bruno Boa Nova conduz cada caso de forma próxima, atenciosa e responsável, entendendo que por trás de todo processo existe uma história real, uma família e preocupações que precisam de orientação jurídica segura e estratégica.
+                O Dr. Bruno Boa Nova conduz cada caso com atenção personalizada e responsabilidade, compreendendo que por trás de cada processo existem histórias reais, famílias e preocupações que demandam orientação jurídica sólida e estratégica.
               </p>
               <p className="text-bn-silver">
-                O trabalho é pautado no atendimento humanizado, na análise cuidadosa de cada detalhe e em uma atuação firme na defesa dos direitos do cliente, sempre com lealdade, estratégia jurídica e foco na melhor solução possível.
+                O atendimento é pautado pela humanização, pela análise criteriosa de cada detalhe e por uma atuação firme na defesa dos direitos do cliente, sempre com ética, planejamento estratégico e foco na melhor solução possível.
               </p>
             </div>
 
