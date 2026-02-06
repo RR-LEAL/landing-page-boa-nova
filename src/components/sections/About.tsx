@@ -29,7 +29,7 @@ export const About: React.FC = () => {
 
             <div className="space-y-4 leading-relaxed pt-2">
               <p className="text-bn-silver">
-                Este escritório nasceu com o propósito de oferecer mais do que orientação jurídica: oferecer clareza, apoio e segurança para pessoas que estão enfrentando problemas jurídicos delicados e urgentes.
+                Este escritório nasceu com o propósito de oferecer mais do que orientação jurídica: oferecer clareza, apoio e segurança para pessoas que enfrentam problemas delicados e urgentes. À frente está o Dr. Bruno Boa Nova, formado pela Universidade Gama Filho, com pós-graduação em direito penal e processual penal pela Ebradi e especialista em crimes relacionados à Lei Maria da Penha.
               </p>
               <p className="text-bn-silver">
                 À frente do atendimento, o Dr. Bruno Boa Nova conduz cada caso de forma próxima, atenciosa e responsável, entendendo que por trás de todo processo existe uma história real, uma família e preocupações que precisam de orientação jurídica segura e estratégica.
